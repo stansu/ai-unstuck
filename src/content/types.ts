@@ -107,6 +107,26 @@ export interface UiCopy {
     optional: string;
     privacyNote: string;
   };
+  handoff: {
+    eyebrow: string;
+    title: string;
+    intro: string;
+    includesLabel: string;
+    includes: [string, string, string, string];
+    progressLabel: string;
+    progressPlaceholder: string;
+    progressHelp: string;
+    privacyNote: string;
+    copy: string;
+    copied: string;
+    download: string;
+    downloaded: string;
+    preview: string;
+    previewHint: string;
+    emptyNote: string;
+    jump: string;
+    copyAria: string;
+  };
   result: {
     eyebrow: string;
     forLabel: string;

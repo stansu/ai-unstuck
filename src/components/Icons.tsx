@@ -4,6 +4,7 @@ import type { GoalId, PainId } from '../content/types';
 export type IconName =
   | 'arrowRight'
   | 'arrowUpRight'
+  | 'arrowDown'
   | 'chevronLeft'
   | 'question'
   | 'waves'
@@ -34,6 +35,12 @@ const paths: Record<IconName, React.ReactNode> = {
     <>
       <path d="M7 17 17 7" />
       <path d="M8 7h9v9" />
+    </>
+  ),
+  arrowDown: (
+    <>
+      <path d="M12 5v14" />
+      <path d="m6 13 6 6 6-6" />
     </>
   ),
   chevronLeft: <path d="m14 6-6 6 6 6" />,

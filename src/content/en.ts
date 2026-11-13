@@ -275,7 +275,7 @@ export const en: SiteContent = {
       consoleOptions: ['I can’t frame the ask', 'The answer is generic', 'I can’t trust the facts'],
       consoleFoot: 'Pick one to break it down',
       annotation: 'You don’t need a better AI.\nYou need a better brief.',
-      chips: ['5 tasks', '6 blockers', '30 combinations'],
+      chips: ['5 tasks', '6 blockers', '30 diagnostic paths'],
     },
     pains: {
       index: '01 ／ COMMON BLOCKS',
@@ -299,7 +299,7 @@ export const en: SiteContent = {
         },
         {
           title: 'Leave with a next step',
-          body: 'Get three concrete moves, a prompt you can copy, and the traps to avoid.',
+          body: 'Get three concrete moves, a prompt you can copy, and the traps to avoid—then take a handoff pack to another model if needed.',
         },
       ],
     },
@@ -340,6 +340,28 @@ export const en: SiteContent = {
       optional: 'Optional',
       privacyNote: 'Stays in this tab. Nothing is uploaded.',
     },
+    handoff: {
+      eyebrow: 'AI HANDOFF ／ CONTINUATION PACK',
+      title: 'Let the next AI pick up from here.',
+      intro:
+        'Package the task, blocker, three-step plan, starter prompt and your latest progress into one pasted thread. Switch models without explaining everything again.',
+      includesLabel: 'The pack includes',
+      includes: ['Task & blocker', 'Playbook & traps', 'Starter prompt', 'Your latest progress'],
+      progressLabel: 'Current progress or AI response',
+      progressPlaceholder:
+        'e.g. I tried step one, but it still gave generic advice. Here is its last response…',
+      progressHelp: 'Paste the reply you received, where you are stuck, or what you want to ask next.',
+      privacyNote: 'Stays in this tab. It is never added to the share link or uploaded.',
+      copy: 'Copy handoff pack',
+      copied: 'Handoff copied',
+      download: 'Download Markdown',
+      downloaded: 'Markdown downloaded',
+      preview: 'Preview handoff prompt',
+      previewHint: 'Paste it into a new chat with ChatGPT, Claude, Gemini or any other model.',
+      emptyNote: 'No progress yet? The pack will ask the next AI to continue from the diagnosis above.',
+      jump: 'Switching models? Use the handoff pack',
+      copyAria: 'Copy the AI handoff pack to clipboard',
+    },
     result: {
       eyebrow: 'YOUR DIAGNOSIS ／ DIAGNOSTIC 001',
       forLabel: 'For',
@@ -351,7 +373,7 @@ export const en: SiteContent = {
       promptEyebrow: 'COPY & PASTE',
       promptTitle: 'Paste this into your AI',
       promptHelp:
-        'Assembled from your task and block. Before sending, replace the example task and the “what I’ve tried” line with your real details.',
+        'Assembled from your task and block. Before sending, replace the example task and the “what I’ve tried” line with your real details. If the AI is still stuck, use the handoff pack below with another model.',
       copy: 'Copy prompt',
       copied: 'Copied',
       copyFailed: 'Copy failed. Please select the text manually.',

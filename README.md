@@ -4,7 +4,7 @@
 
 **線上使用：<https://stansu.github.io/ai-unstuck/>** · **原始碼：<https://github.com/stansu/ai-unstuck>**
 
-一個給非工程師的中英文 AI 實戰指南。用三個步驟定位「任務 × 卡點」，產出一份可以立刻照做的診斷：3 個具體動作、一段可複製的提示詞，以及最容易踩的雷。
+一個給非工程師的中英文 AI 實戰指南。用三個步驟定位「任務 × 卡點」，產出一份可以立刻照做的診斷：3 個具體動作、一段可複製的提示詞、最容易踩的雷，以及能讓下一個 AI 無縫接手的脈絡包。
 
 ![AI 解題室首頁](docs/preview.png)
 
@@ -12,13 +12,21 @@
 
 很多 AI 卡關不是因為模型不夠聰明，而是因為任務沒有說清楚。這個網站不提供另一份「100 個神奇 prompt」清單，而是幫使用者把問題拆開：
 
-- **引導式診斷**：選擇任務 → 選擇卡點 → 選填情境，30 種結果組合。
+- **引導式診斷**：選擇任務 → 選擇卡點 → 選填情境，30 種核心診斷路徑。實際輸出會依你的任務描述、已嘗試方法與最新進展動態組裝，不是 30 段固定文字。
 - **可執行的結果頁**：3 步行動、可複製的客製化提示詞、避免事項與下一步。
+- **AI Handoff 交接包**：把任務、卡點、三步行動、起始提示詞與最新進展打包成一段可直接貼給另一個模型的接手指令。
+- **Markdown 匯出**：下載完整診斷與接手包，可保存、附在信件中，或上傳到其他 AI 工具。
 - **中英雙語**：所有介面與指南內容都有繁體中文與英文版本，可隨時切換。
 - **可分享**：分享連結只包含任務與卡點，不會帶上使用者填寫的文字。
 - **完全靜態**：沒有後端、沒有 API 金鑰、沒有追蹤腳本；輸入只留在瀏覽器。
 - **可直接列印**：結果頁提供列印／存成 PDF 的版面。
 - **無障礙**：鍵盤操作、可見焦點、語意標記、降低動態效果支援；以 axe WCAG 2.2 AA 規則檢查為 0 violations。
+
+### AI 接手包
+
+把目前的診斷與最新進展打包，貼給下一個模型繼續處理；也可以下載成 Markdown。
+
+![AI 接手包](docs/handoff.png)
 
 ### 五種任務 × 六種卡點
 
@@ -37,7 +45,7 @@
 - 純 CSS 設計系統，沒有 UI framework 或外部字型請求
 - 使用 hash routing，GitHub Pages 不需要 SPA fallback
 - `base: './'`，可部署在帳號根目錄、專案子路徑或自訂網域
-- 狀態保存：語言存在 `localStorage`；本次診斷草稿存在 `sessionStorage`，關閉分頁即清除
+- 狀態保存：語言存在 `localStorage`；本次診斷草稿與接手包進展存在 `sessionStorage`，關閉分頁即清除
 
 ```text
 src/
@@ -52,6 +60,7 @@ src/
 │   └── prompt.ts           # 提示詞組裝邏輯
 ├── lib/
 │   ├── clipboard.ts        # 複製與 Web Share
+│   ├── download.ts         # Markdown 下載
 │   ├── draft.ts            # 診斷草稿型別
 │   └── router.ts           # Hash 路由
 ├── pages/
@@ -111,10 +120,10 @@ npm run preview
 
 - [ ] 卡點搜尋與標籤篩選
 - [ ] 更多任務（客服、業務、人資、教學）
-- [ ] 一鍵下載 Markdown / 複製完整診斷
+- [x] 一鍵下載 Markdown / 複製完整診斷
 - [ ] 使用者自訂情境範本（仍維持純前端）
 - [ ] 可選的網站分析（預設關閉）
 
 ## English
 
-**AI Unstuck** is a bilingual, static field guide for everyday AI users. A three-step diagnostic maps a task and a blocker to a practical playbook, a copy-ready prompt, and the traps to avoid. Built with Vite, React, and TypeScript; deployed with GitHub Actions to GitHub Pages. No backend, no API keys, no tracking. See `src/content/en.ts` for all English copy and the sections above for local development and deployment.
+**AI Unstuck** is a bilingual, static field guide for everyday AI users. A three-step diagnostic maps a task and a blocker to a practical playbook, a copy-ready prompt, and the traps to avoid. The result can also be exported as an AI handoff pack—a structured continuation prompt and Markdown file that let another model pick up without starting over. Built with Vite, React, and TypeScript; deployed with GitHub Actions to GitHub Pages. No backend, no API keys, no tracking. See `src/content/en.ts` for all English copy and the sections above for local development and deployment.

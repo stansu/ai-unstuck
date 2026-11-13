@@ -270,7 +270,7 @@ export const zh: SiteContent = {
       consoleOptions: ['不知道怎麼問', '回答很空泛', '不確定是不是真的'],
       consoleFoot: '選一個，開始拆解',
       annotation: '你不是不會用 AI。\n只是少了一個好問題。',
-      chips: ['5 種任務', '6 種卡點', '30 種組合'],
+      chips: ['5 種任務', '6 種卡點', '30 種診斷路徑'],
     },
     pains: {
       index: '01 ／ 常見卡點',
@@ -294,7 +294,7 @@ export const zh: SiteContent = {
         },
         {
           title: '帶走下一步',
-          body: '取得 3 個具體動作、一段可複製的提示詞，以及最容易踩的雷。',
+          body: '取得 3 個具體動作、一段可複製的提示詞，以及最容易踩的雷；需要換模型時，再帶走一份接手包。',
         },
       ],
     },
@@ -334,6 +334,28 @@ export const zh: SiteContent = {
       optional: '選填',
       privacyNote: '內容只留在這個分頁，不會上傳。',
     },
+    handoff: {
+      eyebrow: 'AI HANDOFF ／ 交接包',
+      title: '讓下一個 AI 接手。',
+      intro:
+        '把任務、卡點、三步行動、起始提示詞與你的最新進展，打包成一段可直接貼上的脈絡。換一個模型時，不必從頭解釋。',
+      includesLabel: '接手包會包含',
+      includes: ['任務與卡點', '三步行動與地雷', '起始提示詞', '你的最新進展'],
+      progressLabel: '目前進展或 AI 回覆',
+      progressPlaceholder:
+        '例如：我試了第一步，但 AI 還是一直給通用建議。以下是它最後的回覆……',
+      progressHelp: '可貼上你收到的 AI 回覆、目前卡住的地方，或下一步想問什麼。',
+      privacyNote: '這段文字只留在這個分頁，不會寫進分享連結或上傳。',
+      copy: '複製接手包',
+      copied: '接手包已複製',
+      download: '下載 Markdown',
+      downloaded: 'Markdown 已下載',
+      preview: '預覽接手提示詞',
+      previewHint: '貼到 ChatGPT、Claude、Gemini 等任何模型的新對話。',
+      emptyNote: '還沒填進展也沒關係；接手包會請下一個 AI 直接從上述診斷接續。',
+      jump: '要換 AI？使用接手包',
+      copyAria: '複製 AI 接手包到剪貼簿',
+    },
     result: {
       eyebrow: 'YOUR DIAGNOSIS ／ 你的診斷',
       forLabel: '給',
@@ -344,7 +366,8 @@ export const zh: SiteContent = {
       playbookTitle: '先做這 3 件事',
       promptEyebrow: 'COPY & PASTE',
       promptTitle: '把這段貼給 AI',
-      promptHelp: '已依照你的任務與卡點組裝。送出前，把範例任務與「我已經試過」改成你的實際內容。',
+      promptHelp:
+        '已依照你的任務與卡點組裝。送出前，把範例任務與「我已經試過」改成你的實際內容；若 AI 仍卡住，往下使用接手包換一個模型。',
       copy: '複製提示詞',
       copied: '已複製',
       copyFailed: '複製失敗，請手動選取文字。',

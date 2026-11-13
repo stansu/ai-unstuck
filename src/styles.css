@@ -327,7 +327,7 @@ main:focus {
   z-index: 40;
   top: 0;
   border-bottom: 1px solid var(--line);
-  background: rgba(243, 238, 227, 0.86);
+  background: rgba(243, 238, 227, 0.94);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
 }
@@ -2295,6 +2295,217 @@ html[lang="en"] .block-head h2 {
   line-height: 1.6;
 }
 
+.handoff {
+  margin-top: 65px;
+  padding-top: 38px;
+  border-top: 1px solid var(--line);
+  scroll-margin-top: 105px;
+}
+
+.handoff__intro {
+  max-width: 660px;
+  margin-top: 14px;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+.handoff-card {
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr);
+  margin-top: 24px;
+  overflow: hidden;
+  border: 1.5px solid var(--ink);
+  border-radius: 14px;
+  background: var(--paper-bright);
+  box-shadow: 6px 6px 0 var(--teal);
+}
+
+.handoff-card__context {
+  position: relative;
+  padding: 24px;
+  overflow: hidden;
+  background: var(--ink);
+  color: var(--paper-bright);
+}
+
+.handoff-card__context::after {
+  position: absolute;
+  right: -70px;
+  bottom: -95px;
+  width: 180px;
+  height: 180px;
+  border: 1px solid rgba(251, 248, 240, 0.18);
+  border-radius: 50%;
+  content: "";
+}
+
+.handoff-card__label {
+  position: relative;
+  z-index: 1;
+  color: rgba(251, 248, 240, 0.58);
+  font-family: var(--font-mono);
+  font-size: 8.5px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.handoff-includes {
+  position: relative;
+  z-index: 1;
+  margin-top: 13px;
+}
+
+.handoff-includes li {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 1fr);
+  gap: 9px;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(251, 248, 240, 0.16);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.handoff-includes li:last-child {
+  border-bottom: 0;
+}
+
+.handoff-includes li span {
+  color: var(--yellow);
+  font-family: var(--font-mono);
+  font-size: 8px;
+  letter-spacing: 0.05em;
+}
+
+.handoff-card__form {
+  padding: 24px;
+}
+
+.handoff-field {
+  margin-top: 0;
+}
+
+.handoff-field textarea {
+  min-height: 116px;
+  background: var(--paper);
+}
+
+.handoff__help {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.handoff__privacy {
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.55;
+}
+
+.handoff__privacy svg {
+  margin-top: 1px;
+  color: var(--teal);
+}
+
+.handoff-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.handoff-actions .button {
+  min-height: 45px;
+  font-size: 12px;
+}
+
+.handoff-actions > p {
+  flex: 1;
+  min-width: 170px;
+  color: var(--muted);
+  font-size: 9.5px;
+  line-height: 1.55;
+  text-align: right;
+}
+
+.handoff-preview {
+  margin-top: 12px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: rgba(251, 248, 240, 0.5);
+}
+
+.handoff-preview summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 700;
+  list-style: none;
+}
+
+.handoff-preview summary::-webkit-details-marker {
+  display: none;
+}
+
+.handoff-preview summary > span:first-child::before {
+  display: inline-block;
+  width: 16px;
+  color: var(--coral-deep);
+  content: "+";
+  font-family: var(--font-mono);
+  font-weight: 700;
+}
+
+.handoff-preview[open] summary > span:first-child::before {
+  content: "−";
+}
+
+.handoff-preview__meta {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 7.5px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.handoff-preview pre {
+  max-height: 340px;
+  margin: 0;
+  padding: 18px;
+  overflow: auto;
+  border-top: 1px solid var(--line);
+  background: var(--ink);
+  color: #ece7da;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.75;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.handoff-preview code {
+  font: inherit;
+}
+
+.handoff__empty {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 9.5px;
+  line-height: 1.55;
+}
+
 .traps {
   margin-top: 65px;
   padding-top: 38px;
@@ -2375,8 +2586,28 @@ html[lang="en"] .block-head h2 {
   font-size: 11.5px;
 }
 
+.action-card__jump {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 12px;
+  padding: 10px 0 0;
+  border-top: 1px dashed var(--line);
+  color: var(--teal);
+  font-size: 10.5px;
+  font-weight: 700;
+  text-align: left;
+  transition: color 0.18s;
+}
+
+.action-card__jump:hover {
+  color: var(--coral-deep);
+}
+
 .action-card__hint {
-  margin-top: 14px;
+  margin-top: 12px;
   color: var(--muted);
   font-size: 8.5px;
   line-height: 1.6;
@@ -2770,6 +3001,25 @@ html[lang="en"] .block-head h2 {
   .related-grid {
     grid-template-columns: 1fr;
   }
+
+  .handoff-card {
+    grid-template-columns: 1fr;
+  }
+
+  .handoff-card__context {
+    padding: 22px 24px 16px;
+  }
+
+  .handoff-includes {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 22px;
+    margin-top: 8px;
+  }
+
+  .handoff-includes li:nth-last-child(2) {
+    border-bottom: 0;
+  }
 }
 
 @media (max-width: 680px) {
@@ -3134,6 +3384,48 @@ html[lang="en"] .block-head h2 {
     font-size: 11px;
   }
 
+  .handoff {
+    margin-top: 50px;
+    padding-top: 31px;
+  }
+
+  .handoff-card__form {
+    padding: 20px 18px;
+  }
+
+  .handoff-card__context {
+    padding: 20px 18px 13px;
+  }
+
+  .handoff-includes {
+    grid-template-columns: 1fr;
+  }
+
+  .handoff-includes li:nth-last-child(2) {
+    border-bottom: 1px solid rgba(251, 248, 240, 0.16);
+  }
+
+  .handoff-actions {
+    align-items: stretch;
+  }
+
+  .handoff-actions .button {
+    flex: 1 1 100%;
+  }
+
+  .handoff-actions > p {
+    flex-basis: 100%;
+    text-align: left;
+  }
+
+  .handoff-preview summary {
+    align-items: flex-start;
+  }
+
+  .handoff-preview__meta {
+    text-align: right;
+  }
+
   .result-aside {
     display: flex;
   }
@@ -3217,6 +3509,7 @@ html[lang="en"] .block-head h2 {
   .site-header,
   .result-topline,
   .result-aside,
+  .handoff,
   .related,
   .toast,
   .skip-link,
