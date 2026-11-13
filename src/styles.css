@@ -1325,6 +1325,7 @@ html[lang="en"] .hero__title {
 
 .site-footer__bottom {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 20px;
   padding-top: 20px;
@@ -1333,6 +1334,16 @@ html[lang="en"] .hero__title {
   font-family: var(--font-mono);
   font-size: 8.5px;
   letter-spacing: 0.05em;
+}
+
+.site-footer__bottom a {
+  color: rgba(251, 248, 240, 0.78);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.site-footer__bottom a:hover {
+  color: var(--yellow);
 }
 
 /* ---------- Wizard ---------- */

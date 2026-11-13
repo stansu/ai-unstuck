@@ -98,6 +98,9 @@ export function SiteFooter({ ui, onStart }: { ui: UiCopy; onStart: () => void })
       </div>
       <div className="site-footer__bottom">
         <span>{ui.footer.rights}</span>
+        <a href="https://github.com/stansu/ai-unstuck" target="_blank" rel="noreferrer">
+          GitHub ↗
+        </a>
         <span>{ui.footer.made}</span>
       </div>
     </footer>

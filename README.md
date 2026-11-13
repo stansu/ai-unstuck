@@ -2,6 +2,8 @@
 
 > 卡住的時候，先別急著換一個 AI。
 
+**線上使用：<https://stansu.github.io/ai-unstuck/>** · **原始碼：<https://github.com/stansu/ai-unstuck>**
+
 一個給非工程師的中英文 AI 實戰指南。用三個步驟定位「任務 × 卡點」，產出一份可以立刻照做的診斷：3 個具體動作、一段可複製的提示詞，以及最容易踩的雷。
 
 ![AI 解題室首頁](docs/preview.png)
